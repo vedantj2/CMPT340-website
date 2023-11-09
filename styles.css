@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.intro {
+    height: 100vh;
+}
+
+.intro video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-filter: blur(0px);
+    /* Chrome, Safari, Opera */
+    filter: blur(3px);
+}
+
+
+.intro h1 {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+}
+
+.second {
+    height: 100vh;
+    color: black;
+}
+
+.second h1 {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 80px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+
+
+body {
+    background: rgba(214, 223, 222, 255);
+    /* background: red; */
+}
+
+nav {
+    height: 50px;
+    width: 500px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    position: relative;
+}
+
+p {
+    color: black;
+    position: absolute;
+    top: 25%;
+    left: 15px;
+    font-family: 'Edu TAS Beginner', cursive;
+    cursor: pointer;
+}
+
+.links {
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    position: relative;
+    top: 15px;
+}
+
+a:hover {
+    color: rgba(214, 223, 222, 255);
+}
+
+p:hover {
+    color: rgba(214, 223, 222, 255);
+}
