@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <title>NeuroVision AI</title>
 </head>
 
@@ -13,19 +14,44 @@
 
     <div class="intro">
         <nav>
-            <p class="logo">NeuroVision AI</p>
-            <div class="links">
-                <a href="#">Home</a>
-                <a href="#">Model</a>
-                <a href="#">About Us</a>
-            </div>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#">MODEL</a>
+            <div id="indicator"></div>
         </nav>
-        <h1>NeuroVision AI</h1>
+        <h1 id="home">NeuroVision AI</h1>
         <video src="vid7.mp4" preload="auto"></video>
     </div>
     <section class="second">
-        <h1>About</h1>
-        <div id="container3D"></div>
+        <h1 id="about">ABOUT</h1>
+        <div class="aboutText">
+            <div class="text1">
+                <p class="aText">
+                    In a significant stride towards the intersection of technology and healthcare, my partner and I at
+                    university have successfully developed an innovative brain tumor detection tool using a Regional
+                    Convolutional Neural Network (RCNN). This cutting-edge project stands at the forefront of biomedical
+                    computing, seamlessly blending advanced neural network algorithms with critical medical imaging
+                    techniques. Our creation is not just a testament to our expertise in machine learning and data
+                    analysis, but also a potential game-changer in medical diagnostics. The tool is designed to
+                    accurately and efficiently identify brain tumors, paving the way for quicker, more reliable
+                    diagnoses and, consequently, more effective treatment plans. This accomplishment is a prime example
+                    of how technology, when applied thoughtfully, can have a profound impact on healthcare, offering
+                    hope for improved patient outcomes and revolutionizing the approach towards medical challenges."
+                    <br>
+                    <br>
+
+                    The aim of this project was to develop a web application designed to detect brain tumors
+                    from MRI scans. Initially, we focused on binary classification, distinguishing between the
+                    presence and absence of tumors. However, our long-term goal was to extend the application's
+                    capabilities to identify various types of brain tumors. To achieve this, we leveraged a Regional
+                    Convolutional Neural Network (RCNN) to pinpoint the precise areas in the brain that may contain
+                    tumors. We made use of the U-NET achitecture to reach this goal. U-Net is a popular deep-learning
+                    architecture for semantic segmentation. Originally developed for medical images, it had great
+                    success in this field.
+                </p>
+            </div>
+            <div class="brainContainer"></div>
+        </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
@@ -42,6 +68,23 @@
         crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                let target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        'behavior': 'smooth',
+                        'left': 0,
+                        'top': target.offsetTop - 50 // Adjust this value if you want to offset the scroll position
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
